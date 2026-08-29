@@ -353,6 +353,7 @@ aside{ display:flex; flex-direction:column; gap:16px; }
 /* Homepage jobs list — left/right column table, each with its own
    Recruitment Name / Last Date header. */
 .homejobs-columns{ display:grid; grid-template-columns:1fr 1fr; gap:16px 24px; align-items:start; }
+.homejobs-columns .info-table{ min-width:0; }
 
 .view-all-link{
   display:block; text-align:right; margin-top:10px; padding-top:10px;
