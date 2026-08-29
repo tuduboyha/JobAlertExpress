@@ -137,4 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCategoryChips();
   renderCategorySlider();
   renderAllHomeCategoryLists();
+
+  const followWidget = document.getElementById("homeFollowWidget");
+  if (followWidget) followWidget.innerHTML = joinChannelsHtml();
 });

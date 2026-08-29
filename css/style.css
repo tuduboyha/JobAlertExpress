@@ -506,6 +506,16 @@ aside{ display:flex; flex-direction:column; gap:16px; }
 .card-heading-icon.results{ background:linear-gradient(135deg, var(--result), #0b7d57); }
 .card-heading-icon.related{ background:linear-gradient(135deg, #6366f1, #4338ca); }
 
+/* ---------- Follow Us banner (homepage) ---------- */
+.follow-band{
+  display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
+  background:linear-gradient(120deg, #0f172a, #1e293b); border-radius:16px; padding:26px 30px;
+  color:#fff; margin-top:28px;
+}
+.follow-band-text h2{ font-size:1.25rem; margin:0 0 6px; }
+.follow-band-text p{ margin:0; color:rgba(255,255,255,.75); font-size:.88rem; max-width:440px; }
+.follow-band-buttons .join-channels{ flex-direction:row; flex-wrap:wrap; }
+
 /* ---------- Follow Us: join-channel buttons ---------- */
 .join-channels{ display:flex; flex-direction:column; gap:10px; }
 .join-channel-btn{
