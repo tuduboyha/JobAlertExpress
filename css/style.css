@@ -652,21 +652,14 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
     display:none;
   }
 
-  /* Floating share bar covers body text if left centred on a narrow
-     screen — shrink it, stack it vertically and anchor it to the middle
-     of the screen on the right edge instead of the bottom. */
-  .share-overlay{
-    left:auto; right:12px; bottom:auto; top:50%; transform:translateY(-50%);
-    flex-direction:column; padding:8px 6px; gap:8px; border-radius:20px;
-  }
-  .share-overlay-label{ border-right:none; border-bottom:1px solid var(--line); padding-right:0; padding-bottom:6px; }
+  /* Mobile now mirrors the desktop layout for these two: a centred
+     bottom share bar plus a back-to-top button on the same row. Just
+     scale the share bar down slightly so it comfortably fits narrow
+     screens without covering body text. */
+  .share-overlay{ padding:6px 10px; gap:8px; }
   .share-overlay-label span{ display:none; }
   .share-overlay-btn{ width:30px; height:30px; }
   .share-overlay-btn svg{ width:14px; height:14px; }
-
-  /* Sit back-to-top directly below the share bar, in the same right-edge
-     column, instead of down at the bottom corner. */
-  .back-to-top{ right:12px; bottom:auto; top:calc(50% + 108px); }
 
   /* Ad slots had a large top/bottom margin sized for desktop — tighten it
      on mobile so ads don't push content around as much. */
