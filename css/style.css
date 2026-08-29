@@ -434,7 +434,10 @@ aside{ display:flex; flex-direction:column; gap:16px; }
   padding:10px 14px; border-bottom:1px solid var(--line); white-space:nowrap;
 }
 .info-table tbody td{ padding:10px 14px; border-bottom:1px solid var(--line); color:var(--ink); }
-.info-table th:not(:last-child), .info-table td:not(:last-child){ border-right:1px solid var(--line); }
+/* box-shadow instead of border-right — border-collapse rounds adjacent
+   cell borders independently, which left tiny gaps in the divider at
+   every row boundary; a box-shadow renders as one unbroken line. */
+.info-table th:not(:last-child), .info-table td:not(:last-child){ box-shadow:inset -1px 0 0 var(--line); }
 .info-table tbody td a{ color:var(--brand); font-weight:600; }
 .info-table tbody td a:hover{ text-decoration:underline; }
 .info-table tbody tr:last-child td{ border-bottom:none; }
