@@ -667,7 +667,7 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
   /* Back to top used to sit just above the share bar — now that the share
      bar has moved to the middle of the screen, bring it back down to the
      bottom-right corner. */
-  .back-to-top{ right:14px; bottom:14px; }
+  .back-to-top{ right:14px; bottom:6px; }
 
   /* Ad slots had a large top/bottom margin sized for desktop — tighten it
      on mobile so ads don't push content around as much. */
