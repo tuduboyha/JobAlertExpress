@@ -617,7 +617,10 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
   .search-wrap{ width:170px; }
   .grid{ grid-template-columns:repeat(2,1fr); gap:10px; }
   .grid[data-category], #categoryGrid, #sectorGrid{ grid-template-columns:repeat(2,1fr); }
-  .footer-grid{ grid-template-columns:1fr; }
+  /* JobAlertExpress (intro) and Contact stay full-width; Categories and
+     Quick Links sit side by side as a 2-column row between them. */
+  .footer-grid{ grid-template-columns:1fr 1fr; gap:20px 24px; }
+  .footer-grid > div:first-child, .footer-grid > div:last-child{ grid-column:1 / -1; }
   .hero{ padding:32px 0 40px; }
 
   /* Two post cards per row on mobile — shrink the banner so title/icon
