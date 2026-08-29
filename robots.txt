@@ -1,0 +1,29 @@
+# robots.txt for JobAlertExpress
+# https://www.jobalertexpress.com - replace with your real domain after deploying.
+
+# Allow every search engine and AI/answer-engine crawler by default.
+User-agent: *
+Allow: /
+
+# Explicitly welcome the major AI/GEO crawlers (redundant with the wildcard
+# above, but listed for clarity - remove any of these if you'd rather your
+# content NOT be used to train or answer via that engine).
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.jobalertexpress.com/sitemap.xml

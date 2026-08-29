@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobAlertExpress — Latest Govt Jobs, Admit Card & Results</title>
+<meta name="description" content="Latest government job notifications, admit card downloads, results and exam syllabus at one place.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.jobalertexpress.com/index.html">
+<meta property="og:title" content="JobAlertExpress — Latest Govt Jobs, Admit Card & Results">
+<meta property="og:description" content="Latest government job notifications, admit card downloads, results and exam syllabus at one place.">
+<meta property="og:url" content="https://www.jobalertexpress.com/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JobAlertExpress">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JobAlertExpress — Latest Govt Jobs, Admit Card & Results">
+<meta name="twitter:description" content="Latest government job notifications, admit card downloads, results and exam syllabus at one place.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%233730d6%22/><text x=%2216%22 y=%2222%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22>J</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📢 Daily updates on Govt Jobs, Admit Card, Results &amp; Syllabus</span>
+    <span><a href="contact.html">Contact Us</a></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="dot"></span>
+      <span>JobAlertExpress<br><small>Sarkari Naukri • Admit Card • Result</small></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="latest-jobs.html">Latest Jobs</a>
+      <a href="admit-card.html">Admit Card</a>
+      <a href="results.html">Results</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div class="search-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" placeholder="Search jobs, results, admit card..." autocomplete="off">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Latest Govt Jobs, Admit Card &amp; Results</h1>
+    <p>One place for the newest recruitment notifications, admit card downloads, results and exam syllabus — updated regularly.</p>
+    <div class="chip-row">
+      <button class="chip active" data-filter="all">All Updates</button>
+      <button class="chip" data-filter="jobs">Latest Jobs</button>
+      <button class="chip" data-filter="admitcard">Admit Card</button>
+      <button class="chip" data-filter="results">Results</button>
+      <button class="chip" data-filter="syllabus">Syllabus</button>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="section category-slider-section">
+    <div class="section-head">
+      <h2><span class="bar" style="background:var(--brand)"></span>Browse by Category</h2>
+    </div>
+    <div class="category-slider">
+      <div class="category-slider-track" id="categorySliderTrack"></div>
+    </div>
+  </section>
+
+  <div data-ad-slot="homeTop"></div>
+
+  <section class="section cat-section" id="jobs" data-section="jobs">
+    <div class="section-head">
+      <h2><span class="bar" style="background:var(--job)"></span>Latest Jobs <span data-year></span> <span style="color:var(--muted); font-weight:500; font-size:.85rem;">(<span data-count="job">0</span>)</span></h2>
+      <a class="view-all" href="latest-jobs.html">View All →</a>
+    </div>
+    <div class="grid" data-category="job"></div>
+
+    <div id="categoryListSection"></div>
+
+    <div style="text-align:center; margin-top:18px;">
+      <a class="btn primary" href="latest-jobs.html" style="display:inline-flex; width:auto; padding:10px 24px;">View All Jobs →</a>
+    </div>
+  </section>
+
+  <section class="section cat-section" id="admitcard" data-section="admitcard">
+    <div class="section-head">
+      <h2><span class="bar" style="background:var(--admitcard)"></span>Admit Card Download <span data-year></span> <span style="color:var(--muted); font-weight:500; font-size:.85rem;">(<span data-count="admitcard">0</span>)</span></h2>
+      <a class="view-all" href="admit-card.html">View All →</a>
+    </div>
+    <div class="grid" data-category="admitcard"></div>
+  </section>
+
+  <div data-ad-slot="homeMiddle"></div>
+
+  <section class="section cat-section" id="results" data-section="results">
+    <div class="section-head">
+      <h2><span class="bar" style="background:var(--result)"></span>Results <span data-year></span> <span style="color:var(--muted); font-weight:500; font-size:.85rem;">(<span data-count="result">0</span>)</span></h2>
+      <a class="view-all" href="results.html">View All →</a>
+    </div>
+    <div class="grid" data-category="result"></div>
+  </section>
+
+  <section class="section cat-section" id="syllabus" data-section="syllabus">
+    <div class="section-head">
+      <h2><span class="bar" style="background:var(--syllabus)"></span>Syllabus &amp; Exam Pattern <span data-year></span> <span style="color:var(--muted); font-weight:500; font-size:.85rem;">(<span data-count="syllabus">0</span>)</span></h2>
+      <a class="view-all" href="syllabus.html">View All →</a>
+    </div>
+    <div class="grid" data-category="syllabus"></div>
+  </section>
+
+  <div data-ad-slot="homeBottom"></div>
+
+</main>
+
+<footer id="contact">
+  <div class="container footer-grid">
+    <div>
+      <h4>JobAlertExpress</h4>
+      <p>A free portal for the latest government job notifications, admit cards, results and exam syllabus.</p>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="latest-jobs.html">Latest Jobs</a></li>
+        <li><a href="admit-card.html">Admit Card</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Email: your-email@example.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 JobAlertExpress. All Rights Reserved.</div>
+</footer>
+
+<script src="data/posts.js"></script>
+<script src="data/ads.js"></script>
+<script src="js/common.js"></script>
+<script src="js/ads.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

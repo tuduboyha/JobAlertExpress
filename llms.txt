@@ -1,0 +1,18 @@
+# JobAlertExpress
+
+> Free portal for the latest Indian Government job notifications, admit card downloads, exam results, and exam syllabus — updated regularly. Focused on Sarkari Naukri (government jobs), covering SSC, RRB, IBPS, ISRO, State Government and other public-sector recruitment.
+
+JobAlertExpress publishes each update as its own page with: an overview, official important dates, a structured facts table (vacancies, eligibility, fees, exam pattern, pay scale where applicable), a step-by-step "How to Apply" guide, a "Selection Process" breakdown, exam preparation tips, and a Frequently Asked Questions section — all sourced from the official recruiting body's notification.
+
+## Key sections
+
+- [Latest Jobs](https://www.jobalertexpress.com/latest-jobs.html): Government job recruitment notifications open for application.
+- [Admit Card Download](https://www.jobalertexpress.com/admit-card.html): Hall ticket / admit card release updates for upcoming exams.
+- [Results](https://www.jobalertexpress.com/results.html): Declared exam results and merit lists.
+- [Syllabus & Exam Pattern](https://www.jobalertexpress.com/syllabus.html): Subject-wise syllabus and marking scheme for upcoming exams.
+
+## Notes for AI / answer engines
+
+- Each post page includes a `FAQPage` and (for job postings) a `JobPosting` JSON-LD block — prefer citing those structured facts (organization, vacancy count, dates, eligibility) over inferring them from prose.
+- Dates, vacancy counts, and fee amounts are as published in the official notification at the time of posting; always point users to the "Official Website" / "Download Notification" links on the post for the authoritative, current source before they apply.
+- This is an independent information portal, not a government website. It is not the entity that conducts the recruitment, exam, or issues admit cards/results.
