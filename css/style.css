@@ -308,7 +308,7 @@ nav.main-nav a:hover{ background:var(--brand-light); color:var(--brand); }
 footer{ background:#14121f; color:#a9a7c4; margin-top:40px; }
 .footer-grid{
   display:grid; grid-template-columns:2fr 1fr 1fr 1.2fr; gap:28px;
-  padding:44px 0 24px;
+  padding-top:44px; padding-bottom:24px;
 }
 .footer-grid h4{ color:#fff; font-size:.9rem; margin:0 0 12px; }
 .footer-grid p, .footer-grid a{ font-size:.85rem; color:#a9a7c4; }
