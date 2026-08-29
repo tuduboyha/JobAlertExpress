@@ -438,6 +438,16 @@ aside{ display:flex; flex-direction:column; gap:16px; }
    cell borders independently, which left tiny gaps in the divider at
    every row boundary; a box-shadow renders as one unbroken line. */
 .info-table th:not(:last-child), .info-table td:not(:last-child){ box-shadow:inset -1px 0 0 var(--line); }
+
+/* .homejobs-columns splits posts across two SEPARATE <table> elements
+   that are only visually merged into one box. Each table auto-sizes its
+   own columns from its own rows, so if one side's post titles are longer
+   than the other's, the two tables land on different column-width
+   ratios and the divider visibly zigzags where they meet. Force both
+   sides to the same fixed ratio so the line stays straight regardless
+   of content length. */
+.homejobs-columns .info-table{ table-layout:fixed; }
+.homejobs-columns .info-table th:last-child, .homejobs-columns .info-table td:last-child{ width:110px; }
 .info-table tbody td a{ color:var(--brand); font-weight:600; }
 .info-table tbody td a:hover{ text-decoration:underline; }
 .info-table tbody tr:last-child td{ border-bottom:none; }
