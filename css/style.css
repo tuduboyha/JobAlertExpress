@@ -62,7 +62,7 @@ header.site-header{
 }
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
-  gap:20px; padding:14px 0;
+  gap:20px; padding-top:14px; padding-bottom:14px;
 }
 .brand{
   display:flex; align-items:center; gap:10px;
@@ -108,6 +108,15 @@ nav.main-nav a:hover{ background:var(--brand-light); color:var(--brand); }
 .search-results .sr-empty{ padding:16px; color:var(--muted); font-size:.86rem; text-align:center; }
 
 .menu-toggle{ display:none; background:none; border:none; font-size:1.5rem; color:var(--ink); }
+
+/* Mobile nav close button + backdrop — injected by initMobileNav() in
+   js/common.js so every page gets them without editing each HTML file. */
+.nav-close{ display:none; }
+.nav-backdrop{
+  display:none; position:fixed; inset:0; background:rgba(15,17,23,.45);
+  z-index:79; opacity:0; transition:opacity .2s ease;
+}
+.nav-backdrop.show{ display:block; opacity:1; }
 
 /* ---------- Hero ---------- */
 .hero{
@@ -560,6 +569,13 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
   }
   nav.main-nav.open{ right:0; }
   .menu-toggle{ display:block; flex-shrink:0; }
+  .nav-close{
+    display:flex; align-items:center; justify-content:center;
+    position:absolute; top:14px; right:14px; width:34px; height:34px;
+    border:none; border-radius:8px; background:var(--brand-light); color:var(--ink);
+    font-size:1.1rem; line-height:1; cursor:pointer;
+  }
+  .nav-close:hover{ background:var(--line); }
   .search-wrap{ width:170px; }
   .grid{ grid-template-columns:repeat(2,1fr); gap:10px; }
   .grid[data-category], #categoryGrid, #sectorGrid{ grid-template-columns:repeat(2,1fr); }

@@ -326,7 +326,32 @@ function initMobileNav() {
   const toggle = document.getElementById("menuToggle");
   const nav = document.getElementById("mainNav");
   if (!toggle || !nav) return;
-  toggle.addEventListener("click", () => nav.classList.toggle("open"));
+
+  const backdrop = document.createElement("div");
+  backdrop.className = "nav-backdrop";
+  backdrop.id = "navBackdrop";
+  document.body.appendChild(backdrop);
+
+  const closeBtn = document.createElement("button");
+  closeBtn.className = "nav-close";
+  closeBtn.setAttribute("aria-label", "Close menu");
+  closeBtn.textContent = "✕";
+  nav.prepend(closeBtn);
+
+  function openNav() {
+    nav.classList.add("open");
+    backdrop.classList.add("show");
+  }
+  function closeNav() {
+    nav.classList.remove("open");
+    backdrop.classList.remove("show");
+  }
+
+  toggle.addEventListener("click", () => {
+    nav.classList.contains("open") ? closeNav() : openNav();
+  });
+  closeBtn.addEventListener("click", closeNav);
+  backdrop.addEventListener("click", closeNav);
 }
 
 // Floating "back to top" button. No-ops on pages that don't include the button markup.
