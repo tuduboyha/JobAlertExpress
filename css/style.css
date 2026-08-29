@@ -617,6 +617,10 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
   .share-overlay-label{ padding-right:4px; }
   .share-overlay-btn{ width:30px; height:30px; }
   .share-overlay-btn svg{ width:14px; height:14px; }
+
+  /* Ad slots had a large top/bottom margin sized for desktop — tighten it
+     on mobile so ads don't push content around as much. */
+  [data-ad-slot]{ margin:12px 0 14px; }
 }
 @media (max-width: 480px){
   .header-inner{ flex-wrap:wrap; row-gap:10px; }
