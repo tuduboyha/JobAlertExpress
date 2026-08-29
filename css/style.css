@@ -653,12 +653,21 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
   }
 
   /* Floating share bar covers body text if left centred on a narrow
-     screen — shrink it and tuck it into the bottom-right corner instead. */
-  .share-overlay{ left:auto; right:12px; bottom:14px; transform:none; padding:6px 8px; gap:6px; }
+     screen — shrink it, stack it vertically and anchor it to the middle
+     of the screen on the right edge instead of the bottom. */
+  .share-overlay{
+    left:auto; right:12px; bottom:auto; top:50%; transform:translateY(-50%);
+    flex-direction:column; padding:8px 6px; gap:8px; border-radius:20px;
+  }
+  .share-overlay-label{ border-right:none; border-bottom:1px solid var(--line); padding-right:0; padding-bottom:6px; }
   .share-overlay-label span{ display:none; }
-  .share-overlay-label{ padding-right:4px; }
   .share-overlay-btn{ width:30px; height:30px; }
   .share-overlay-btn svg{ width:14px; height:14px; }
+
+  /* Back to top used to sit just above the share bar — now that the share
+     bar has moved to the middle of the screen, bring it back down to the
+     bottom-right corner. */
+  .back-to-top{ right:14px; bottom:14px; }
 
   /* Ad slots had a large top/bottom margin sized for desktop — tighten it
      on mobile so ads don't push content around as much. */
