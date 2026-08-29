@@ -575,7 +575,7 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
 
 /* ---------- Back to top ---------- */
 .back-to-top{
-  position:fixed; right:22px; bottom:86px; width:46px; height:46px; border-radius:50%;
+  position:fixed; right:22px; bottom:22px; width:46px; height:46px; border-radius:50%;
   background:var(--brand); color:#fff; border:none; display:flex; align-items:center; justify-content:center;
   box-shadow:var(--shadow-hover); opacity:0; pointer-events:none; transform:translateY(10px);
   transition:opacity .2s, transform .2s; z-index:70;
