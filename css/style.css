@@ -528,7 +528,7 @@ aside{ display:flex; flex-direction:column; gap:16px; }
 .follow-band-text, .follow-band-buttons{ position:relative; z-index:1; }
 .follow-band-text h2{ font-size:1.25rem; margin:0 0 6px; }
 .follow-band-text p{ margin:0; color:rgba(255,255,255,.75); font-size:.88rem; max-width:440px; }
-.follow-band-buttons .join-channels{ flex-direction:row; flex-wrap:wrap; }
+.follow-band-buttons .join-channels{ flex-direction:row; flex-wrap:wrap; gap:20px; }
 
 /* ---------- Follow Us: join-channel buttons ---------- */
 .join-channels{ display:flex; flex-direction:column; gap:10px; }
