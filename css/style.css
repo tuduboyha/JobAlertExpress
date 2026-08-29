@@ -554,7 +554,13 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
   .grid[data-category], #categoryGrid, #sectorGrid{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr; }
   .hero{ padding:32px 0 40px; }
-  .homejobs-columns{ grid-template-columns:1fr; }
+  /* Below 720px the 2-column jobs list collapses to 1 column — merge the
+     two table boxes into what reads as a single list instead of two
+     stacked boxes with duplicate headers. */
+  .homejobs-columns{ grid-template-columns:1fr; gap:0; }
+  .homejobs-columns .info-table-wrap:first-child{ border-radius:10px 10px 0 0; }
+  .homejobs-columns .info-table-wrap:last-child{ border-radius:0 0 10px 10px; border-top:none; }
+  .homejobs-columns .info-table-wrap:last-child .info-table thead{ display:none; }
 
   /* Floating share bar covers body text if left centred on a narrow
      screen — shrink it and tuck it into the bottom-right corner instead. */
