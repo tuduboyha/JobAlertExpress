@@ -56,7 +56,7 @@ button{ font-family:inherit; cursor:pointer; }
 
 /* ---------- Header ---------- */
 header.site-header{
-  position:sticky; top:0; z-index:50;
+  position:sticky; top:0; z-index:82;
   background:var(--card);
   border-bottom:1px solid var(--line);
 }
