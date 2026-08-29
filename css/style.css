@@ -137,6 +137,11 @@ nav.main-nav a:hover{ background:var(--brand-light); color:var(--brand); }
 
 /* ---------- Section headers ---------- */
 .section{ padding:44px 0; }
+/* No ad sits between "Browse by Category" and "Latest Jobs" on the
+   homepage any more, so the two sections' own 44px paddings were
+   stacking into a large empty gap. Tighten just this pair. */
+.category-slider-section{ padding-bottom:0; }
+#jobs.cat-section{ padding-top:20px; }
 .page-intro{
   color:var(--ink-soft); font-size:.92rem; line-height:1.65; max-width:900px; margin:10px 0 20px;
 }
