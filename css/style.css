@@ -664,10 +664,9 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
   .share-overlay-btn{ width:30px; height:30px; }
   .share-overlay-btn svg{ width:14px; height:14px; }
 
-  /* Back to top used to sit just above the share bar — now that the share
-     bar has moved to the middle of the screen, bring it back down to the
-     bottom-right corner. */
-  .back-to-top{ right:14px; bottom:6px; }
+  /* Sit back-to-top directly below the share bar, in the same right-edge
+     column, instead of down at the bottom corner. */
+  .back-to-top{ right:12px; bottom:auto; top:calc(50% + 108px); }
 
   /* Ad slots had a large top/bottom margin sized for desktop — tighten it
      on mobile so ads don't push content around as much. */
