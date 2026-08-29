@@ -184,6 +184,17 @@ nav.main-nav a:hover{ background:var(--brand-light); color:var(--brand); }
   display:flex; align-items:center; justify-content:center;
 }
 .category-pill-icon svg{ width:15px; height:15px; }
+
+@media (max-width:720px){
+  /* All 7 pills don't fit on one row at phone widths — scroll horizontally
+     instead of wrapping to multiple lines. */
+  .category-pills{
+    flex-wrap:nowrap; overflow-x:auto; padding-bottom:6px;
+    -webkit-overflow-scrolling:touch; scrollbar-width:none;
+  }
+  .category-pills::-webkit-scrollbar{ display:none; }
+  .category-pill{ flex:0 0 auto; white-space:nowrap; }
+}
 /* ---------- Cards grid ---------- */
 .grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 .grid[data-category], #categoryGrid, #sectorGrid{ grid-template-columns:repeat(4,1fr); }
