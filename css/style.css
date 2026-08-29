@@ -529,6 +529,15 @@ aside{ display:flex; flex-direction:column; gap:16px; }
 [data-ad-slot]{ display:flex; justify-content:center; margin:24px 0 28px; }
 aside [data-ad-slot]{ margin:0; }
 aside [data-ad-slot] .ad-slot{ max-width:none !important; }
+
+/* A .section already has 44px of its own top/bottom padding — when an ad
+   sits right against that edge (as a sibling, or as the last thing inside
+   the section) that padding stacks with the ad's own margin into a much
+   bigger gap than intended. Drop the redundant side so only one of the
+   two spacers applies. */
+.section + [data-ad-slot]{ margin-top:0; }
+[data-ad-slot] + .section{ padding-top:0; }
+.section:has(> [data-ad-slot]:last-child){ padding-bottom:0; }
 .ad-slot{ width:100%; }
 .ad-image{ display:block; border-radius:10px; overflow:hidden; }
 .ad-image img{ width:100%; height:auto; display:block; }
