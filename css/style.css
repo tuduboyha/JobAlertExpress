@@ -430,7 +430,7 @@ aside{ display:flex; flex-direction:column; gap:16px; }
 .info-table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px; }
 .info-table{ width:100%; border-collapse:collapse; font-size:.85rem; min-width:420px; }
 .info-table thead th{
-  background:var(--bg); color:var(--ink-soft); font-weight:700; text-align:left;
+  background:var(--brand-light); color:var(--brand-dark); font-weight:700; text-align:left;
   padding:10px 14px; border-bottom:1px solid var(--line); white-space:nowrap;
 }
 .info-table tbody td{ padding:10px 14px; border-bottom:1px solid var(--line); color:var(--ink); }
