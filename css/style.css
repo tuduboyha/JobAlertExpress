@@ -549,6 +549,14 @@ aside [data-ad-slot] .ad-slot{ max-width:none !important; }
   .footer-grid{ grid-template-columns:1fr; }
   .hero{ padding:32px 0 40px; }
   .homejobs-columns{ grid-template-columns:1fr; }
+
+  /* Floating share bar covers body text if left centred on a narrow
+     screen — shrink it and tuck it into the bottom-right corner instead. */
+  .share-overlay{ left:auto; right:12px; bottom:14px; transform:none; padding:6px 8px; gap:6px; }
+  .share-overlay-label span{ display:none; }
+  .share-overlay-label{ padding-right:4px; }
+  .share-overlay-btn{ width:30px; height:30px; }
+  .share-overlay-btn svg{ width:14px; height:14px; }
 }
 @media (max-width: 480px){
   .header-inner{ flex-wrap:wrap; row-gap:10px; }
