@@ -44,19 +44,25 @@ function renderAllSections() {
   Object.keys(CATEGORY_META).forEach(renderSection);
 }
 
-// Compact "Recruitment Name / Last Date" table below the homepage's
-// "Latest Jobs" section — showing every job (not just the preview cards
-// above it), split into a left and right column table, each with its own
-// "Last Date" column header instead of repeating the label per row.
-function renderHomeJobsList() {
-  const section = document.getElementById("categoryListSection");
+// Compact "Recruitment Name / Date" table below each homepage section's
+// card grid — showing every post in that category (not just the preview
+// cards above it), split into a left and right column table. Job posts
+// show their application Last Date; admit card/result/syllabus posts
+// don't have a meaningful deadline, so they show Posted Date instead.
+function renderHomeCategoryList(category, containerId) {
+  const section = document.getElementById(containerId);
   if (!section) return;
 
-  const posts = postsByCategory("job");
+  const posts = postsByCategory(category);
   if (!posts.length) {
-    section.innerHTML = `<div class="empty-state">No jobs yet. Add one in data/posts.js.</div>`;
+    section.innerHTML = `<div class="empty-state">No posts yet. Add one in data/posts.js.</div>`;
     return;
   }
+
+  const dateLabel = category === "job" ? "Last Date" : "Posted Date";
+  const dateCell = (p) => category === "job"
+    ? `<td${p.lastDate ? ' class="text-danger"' : ""}>${p.lastDate ? formatDate(p.lastDate) : "—"}</td>`
+    : `<td>${formatDate(p.postedDate)}</td>`;
 
   const mid = Math.ceil(posts.length / 2);
   const columns = [posts.slice(0, mid), posts.slice(mid)];
@@ -64,23 +70,30 @@ function renderHomeJobsList() {
   const tableHtml = (col) => `
     <div class="info-table-wrap">
       <table class="info-table">
-        <thead><tr><th>Recruitment Name</th><th>Last Date</th></tr></thead>
+        <thead><tr><th>Recruitment Name</th><th>${dateLabel}</th></tr></thead>
         <tbody>${col.map(p => `
           <tr>
             <td><a href="post.html?id=${encodeURIComponent(p.id)}">${escapeHtml(p.title)}</a></td>
-            <td${p.lastDate ? ' class="text-danger"' : ""}>${p.lastDate ? formatDate(p.lastDate) : "—"}</td>
+            ${dateCell(p)}
           </tr>`).join("")}</tbody>
       </table>
     </div>`;
 
   section.innerHTML = `
     <div class="info-table-block">
-      <h3 class="info-table-heading">Latest Govt Jobs List ${CURRENT_YEAR}</h3>
+      <h3 class="info-table-heading">${CATEGORY_LIST_HEADINGS[category]} ${CURRENT_YEAR}</h3>
       <div class="homejobs-columns">
         ${tableHtml(columns[0])}
         ${tableHtml(columns[1])}
       </div>
     </div>`;
+}
+
+function renderAllHomeCategoryLists() {
+  renderHomeCategoryList("job", "categoryListSection");
+  renderHomeCategoryList("admitcard", "admitCardListSection");
+  renderHomeCategoryList("result", "resultsListSection");
+  renderHomeCategoryList("syllabus", "syllabusListSection");
 }
 
 // Horizontally-scrolling "Browse by Category" slider — one tile per sector
@@ -123,5 +136,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAllSections();
   initCategoryChips();
   renderCategorySlider();
-  renderHomeJobsList();
+  renderAllHomeCategoryLists();
 });
