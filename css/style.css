@@ -29,9 +29,10 @@
 }
 
 *{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x:hidden; }
 body{
   margin:0;
+  overflow-x:hidden;
   font-family:'Inter',system-ui,sans-serif;
   color:var(--ink);
   background:var(--bg);
@@ -294,6 +295,10 @@ footer{ background:#14121f; color:#a9a7c4; margin-top:40px; }
 
 /* ---------- Detail page ---------- */
 .detail-wrap{ display:grid; grid-template-columns:220px 2fr 1fr; gap:24px; align-items:start; }
+/* Grid items default to min-width:auto, which lets a wide child (e.g. a
+   table with long text) force the whole column wider than its track —
+   min-width:0 lets them shrink-to-fit and wrap normally instead. */
+.detail-wrap > *{ min-width:0; }
 .left-sidebar{
   display:flex; flex-direction:column; gap:16px;
   position:sticky; top:104px; max-height:calc(100vh - 120px); overflow-y:auto;
