@@ -168,7 +168,7 @@ function renderListTable(posts, heading) {
     </tr>`).join("");
 
   section.innerHTML = posts.length ? `
-    <div class="info-table-block">
+    <div class="info-table-block quick-list-table">
       <h3 class="info-table-heading">${escapeHtml(heading)}</h3>
       <div class="info-table-wrap">
         <table class="info-table">
